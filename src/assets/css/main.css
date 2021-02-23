@@ -6,3 +6,5 @@
 .color-nabel{
     background-color: #f2f7ff;
 }
+
+.bg-light-primary{background-color:#ebf3ff;color:#002152}.bg-light-secondary{background-color:#e6eaee;color:#181e24}.bg-light-success{background-color:#d2ffe8;color:#00391c}.bg-light-danger{background-color:#ffdede;color:#450000}.bg-light-warning{background-color:#fffdd8;color:#3f3c00}.bg-light-info{background-color:#e6fdff;color:#00474d}
