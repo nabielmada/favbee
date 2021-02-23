@@ -111,172 +111,59 @@
                     </p>
 
                     <b-card-group deck="deck" class="pt-5">
+                        <div v-for="product in products" :key="product.id">
 
-                        <b-card
-                            img-src="/produk1.jpg"
-                            img-alt="Image"
-                            img-top="img-top"
-                            class="mb-2 shadow-sm">
+                            <b-card class="mb-2 shadow-sm">
+                                <img v-bind:src="'/' + JSON.parse(product.avatar)[0]" img-top="img-top"/>
+                                <!-- {{ JSON.parse(product.avatar)[0] }} -->
+                                <b-card-text>
 
-                            <b-card-text>
-                                Saniter Fabric Disinfectant 200+30ml - 2pcs
-                                <div class="pb-2"></div>
+                                    <div v-if="product.nama.length<10">
+                                        {{ product.nama }}
 
-                                <!-- Untuk jika ada diskon -->
-                                <span class="badge bg-light-danger">15%</span>
-                                <font size="2rem" class="text-muted">
-                                    <strike class="pl-2">Rp 42.800</strike>
-                                </font>
-                                <br/>
-                                <!-- end diskon -->
+                                    </div>
+                                    <div v-else>
+                                        {{ product.nama.substring(0,30) + "..." }}
+                                    </div>
 
-                                <b class="text-success">Rp 36.380</b>
+                                    <div class="pb-2"></div>
 
-                                <div class="pb-2"></div>
-                                <font size="2rem" class="text-muted">
-                                    Kota Semarang
-                                </font>
-                                <div>
-                                    <b-form-rating
-                                        id="rating-inline"
-                                        inline="inline"
-                                        value="4"
-                                        no-border="no-border"
-                                        size="sm"
-                                        variant="warning"
-                                        class="pl-0"
-                                        readonly="readonly"></b-form-rating>
+                                    <!-- Untuk jika ada diskon -->
+                                    <span class="badge bg-light-danger">15%</span>
                                     <font size="2rem" class="text-muted">
-                                        (4)
+                                        <strike class="pl-2">Rp 42.800</strike>
                                     </font>
-                                </div>
-                            </b-card-text>
+                                    <br/>
+                                    <!-- end diskon -->
 
-                        </b-card>
+                                    <b class="text-success">
+                                        Rp
+                                        {{ product.harga | formatNumber }}
+                                    </b>
 
-                        <b-card
-                            img-src="/produk2.jpg"
-                            img-alt="Image"
-                            img-top="img-top"
-                            tag="article"
-                            class="mb-2 shadow-sm">
-
-                            <b-card-text>
-                                Snackbox / Hampers / New Normal / Free Req Gift Card
-                                <div class="pb-2"></div>
-
-                                <!-- Untuk jika ada diskon -->
-                                <span class="badge bg-light-danger">15%</span>
-                                <font size="2rem" class="text-muted">
-                                    <strike class="pl-2">Rp 50.000</strike>
-                                </font>
-                                <br/>
-                                <!-- end diskon -->
-
-                                <b class="text-success">Rp 26.000</b>
-
-                                <div class="pb-2"></div>
-                                <font size="2rem" class="text-muted">
-                                    Kota Semarang
-                                </font>
-                                <div>
-                                    <b-form-rating
-                                        id="rating-inline"
-                                        inline="inline"
-                                        value="4"
-                                        no-border="no-border"
-                                        size="sm"
-                                        variant="warning"
-                                        class="pl-0"
-                                        readonly="readonly"></b-form-rating>
+                                    <div class="pb-2"></div>
                                     <font size="2rem" class="text-muted">
-                                        (4)
+                                        Kota Semarang
                                     </font>
-                                </div>
-                            </b-card-text>
+                                    <div>
+                                        <b-form-rating
+                                            id="rating-inline"
+                                            inline="inline"
+                                            value="4"
+                                            no-border="no-border"
+                                            size="sm"
+                                            variant="warning"
+                                            class="pl-0"
+                                            readonly="readonly"></b-form-rating>
+                                        <font size="2rem" class="text-muted">
+                                            (4)
+                                        </font>
+                                    </div>
+                                </b-card-text>
 
-                        </b-card>
+                            </b-card>
+                        </div>
 
-                        <b-card
-                            img-src="/produk3.jpg"
-                            img-alt="Image"
-                            img-top="img-top"
-                            tag="article"
-                            class="mb-2 shadow-sm">
-
-                            <b-card-text>
-                                Masker 3 ply Medis Masker Bedah Kemenkes 3ply isi...
-                                <div class="pb-2"></div>
-
-                                <!-- Untuk jika ada diskon -->
-                                <span class="badge bg-light-danger">15%</span>
-                                <font size="2rem" class="text-muted">
-                                    <strike class="pl-2">Rp 50.000</strike>
-                                </font>
-                                <br/>
-                                <!-- end diskon -->
-
-                                <b class="text-success">Rp 26.000</b>
-
-                                <div class="pb-2"></div>
-                                <font size="2rem" class="text-muted">
-                                    Kota Semarang
-                                </font>
-                                <div>
-                                    <b-form-rating
-                                        id="rating-inline"
-                                        inline="inline"
-                                        value="4"
-                                        no-border="no-border"
-                                        size="sm"
-                                        variant="warning"
-                                        class="pl-0"></b-form-rating>
-                                    <font size="2rem" class="text-muted">
-                                        (4)
-                                    </font>
-                                </div>
-                            </b-card-text>
-
-                        </b-card>
-
-                        <b-card
-                            img-src="/produk4.jpg"
-                            img-alt="Image"
-                            img-top="img-top"
-                            tag="article"
-                            class="mb-2 shadow-sm">
-
-                            <b-card-text>
-                                Cetak Foto Polaroid Ukuran 2R ( 6 x 9 Centimeter)...
-                                <div class="pb-2"></div>
-
-                                <!-- Untuk jika ada diskon -->
-                                <!-- <span class="badge bg-light-danger">15%</span> <font size="2rem"
-                                class="text-muted"> <strike class="pl-2">Rp 50.000</strike> </font> <br/> -->
-                                <!-- end diskon -->
-
-                                <b class="text-success">Rp 250</b>
-
-                                <div class="pb-2"></div>
-                                <font size="2rem" class="text-muted">
-                                    Kota Semarang
-                                </font>
-                                <div>
-                                    <b-form-rating
-                                        id="rating-inline"
-                                        inline="inline"
-                                        value="4"
-                                        no-border="no-border"
-                                        size="sm"
-                                        variant="warning"
-                                        class="pl-0"></b-form-rating>
-                                    <font size="2rem" class="text-muted">
-                                        (4)
-                                    </font>
-                                </div>
-                            </b-card-text>
-
-                        </b-card>
                     </b-card-group>
 
                 </b-container>
@@ -298,12 +185,15 @@
         export default {
             name: "Home",
             data() {
-                return {webmenus: null}
+                return {webmenus: null, products: null}
             },
             mounted() {
                 axios
                     .get('http://127.0.0.1:8001/api/webmenu')
                     .then(response => (this.webmenus = response.data.webmenu));
+                axios
+                    .get('http://127.0.0.1:8001/api/product')
+                    .then(response => (this.products = response.data.product));
             }
         }
     </script>
