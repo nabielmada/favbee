@@ -32,12 +32,9 @@
     color: #00474d;
 }
 
-/* Font */
 .resize-font {
     font-size: 18px;
 }
-
-/* Glow Text */
 
 .glow {
     color: #fdfdfd;
@@ -64,8 +61,6 @@
     color: black;
 }
 
-/* Back To Top */
-
 .kembalikeatas {
     position: fixed;
     bottom: 25px;
@@ -73,7 +68,51 @@
     /* display: none; */
 }
 
-/* GOOGLE REVIEW */
+.card-banking:hover {
+    cursor: pointer;
+}
+
+.card-banking-element:checked+.card-banking {
+    border: 2px solid #d7f0da;
+ }
+
+ .card-banking-element:checked+.card-banking::after {
+     position: absolute;
+     top: 15px;
+     right: 35px;
+    font-family: FontAwesome;
+    content: "\f00c";
+    color: #afeabc;
+    font-size: 24px;
+    -webkit-animation-name: fadeInCheckbox;
+    animation-name: fadeInCheckbox;
+    -webkit-animation-duration: .5s;
+    animation-duration: .5s;
+    -webkit-animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  @-webkit-keyframes fadeInCheckbox {
+    from {
+      opacity: 0;
+      -webkit-transform: rotateZ(-20deg);
+    }
+    to {
+      opacity: 1;
+      -webkit-transform: rotateZ(0deg);
+    }
+  }
+  
+  @keyframes fadeInCheckbox {
+    from {
+      opacity: 0;
+      transform: rotateZ(-20deg);
+    }
+    to {
+      opacity: 1;
+      transform: rotateZ(0deg);
+    }
+  }
 
 .hover-card {
     transition: all 0.8s;
@@ -85,6 +124,17 @@
     -moz-box-shadow: 2px 14px 22px -2px rgba(0, 0, 0, 0.1);
     box-shadow: 2px 14px 22px -2px rgba(0, 0, 0, 0.1);
 }
+
+
+.sticky {  
+  position: -webkit-sticky; /* for Safari */
+  position: sticky;
+  top: 0;
+  align-self: flex-start; /* <-- this is the fix */
+}
+
+
+/* end nabielmada */
 
 .alert {
     border: none;
@@ -574,9 +624,9 @@
 }
 .form-group[class*=has-icon-] .form-control-icon i,
 .form-group[class*=has-icon-] .form-control-icon svg {
-    width: 1.2rem;
+    width: 1rem;
     color: #6c757d;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 .form-group[class*=has-icon-] .form-control-icon i:before,
 .form-group[class*=has-icon-] .form-control-icon svg:before {

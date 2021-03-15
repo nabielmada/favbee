@@ -83,7 +83,7 @@
     import Product from '@/components/Product.vue'
     import Footer from '@/components/Footer.vue'
 
-    const axios = require('axios');
+    import axios from 'axios'
 
     export default {
         name: "Home",

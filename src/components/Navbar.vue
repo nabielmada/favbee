@@ -6,10 +6,19 @@
                 <div class="h4 fw-bold pt-1">Favbee shop</div>
             </b-navbar-brand>
 
-            <div class="input-group form-group position-relative has-icon-left mx-5">
+            <!-- <div class="input-group form-group position-relative has-icon-left mx-5">
                 <input type="text" class="form-control" placeholder="lagi cari produk apa ?">
                     <div class="form-control-icon">
-                        <i class="text-muted bi bi-person"></i>
+                        <i class="bi bi-search"></i>
+                    </div>
+                </div> -->
+
+                 <div class="form-group has-icon-left mx-5 w-100 pt-2">
+                <div class="position-relative">
+                    <input type="text" class="form-control" placeholder="lagi cari produk apa ?" id="first-name-icon">
+                        <div class="form-control-icon">
+                            <i class="bi bi-search"></i>
+                        </div>
                     </div>
                 </div>
 
